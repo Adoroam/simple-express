@@ -1,0 +1,8 @@
+html
+  head
+    title #{title}
+    script(src='./static/js/' + title + '.js')
+  body
+    case title
+      when 'users': include pages/users.pug
+      default: include pages/home.pug
