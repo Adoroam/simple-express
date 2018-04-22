@@ -17,7 +17,7 @@ app.set('view engine', 'pug')
 app.get('/', (req, res) => { res.render('index', { title: 'home' }) })
 app.get('/users', (req, res) => { res.render('index', { title: 'users' }) })
 
-app.use(express.static(__dirname))
+app.use(express.static(__dirname + '/dist'))
 app.use('*.js', (req, res, next) => {
   res.setHeader('content-type', 'text/javascript')
   next()
