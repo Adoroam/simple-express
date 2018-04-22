@@ -1,7 +1,7 @@
 html
   head
     title #{title}
-    script(src='./js/' + title + '.js')
+    include includes/head.pug
   body
     case title
       when 'users': include pages/users.pug
